@@ -140,7 +140,7 @@ $ rvm install ruby-2.3.3
 ```
 Typing the above into the terminal will install RVM and Ruby version 2.3.3 (the version needed by Zappi repos).
 
-### IMPORTANT!!
+### *IMPORTANT!!*
 
 By default Mac OSx will use the system ruby. This should not be used during development, and it causes issues with root privileges. RVM is used to manage non-system Ruby versions. To double check that you are in fact using RVM and not system ruby, do the following:
 
@@ -160,3 +160,14 @@ The `/usr/bin/ruby` version is the system version, with the other being the RVM 
  	```
 
 Which confirms that you are in fact using the RVM ruby.	
+
+## Bundler
+
+Bundler is a Ruby gem that automatically downloads gems and handles dependencies for projects. 
+
+*Installation*
+
+```bash
+$ gem install bundler
+```
+**Note:** if you do not have permissions to install gems (i.e. you have to use sudo to use the “gem” command”, it means you are still using the system Ruby and need to change.
