@@ -46,7 +46,7 @@ Similarly to the Homebrew instructions, this directs Zsh to use packages install
  - Terminal should have “(zsh)” somewhere at the top.
  - Typing `$ cat ~/.zshrc` into the terminal should show you the contents of the zshrc file. The bottom line should be export `PATH=“/usr/local/bin:$PATH`.
  
- ## Git and SSH Keys
+## Git and SSH Keys
  
  Git is the most popular version control system. You will need a Github account to complete these steps, so do that first.
  
@@ -244,7 +244,7 @@ brew services start Postgres
 ```
 This can then be run from the terminal with `$ bash ~/.start_my_services.sh`.
 
-# Gnu Scientific Library (GSL)
+## Gnu Scientific Library (GSL)
 
 This is a library which helps with some advanced calculations. Zappi requires version 1.16.0.4 - unfortunately, this is not available with Homebrew or as a Gem, so the library has to be built from scratch with the following steps:
 
@@ -255,11 +255,12 @@ This is a library which helps with some advanced calculations. Zappi requires ve
 5. `$ make`
 6. `$ make install`
 
-# Miscellaneous
+## Miscellaneous
 
 The following are all necessary for various parts of the Zappi repos
 
-Install wkhtmltopdf from https://wkhtmltopdf.org/downloads.html
+Install wkhtmltopdf from https://wkhtmltopdf.org/downloads.html.
+`whtmltopdf` is required when creating Powerpoints and PDF reports
 
 ```bash
 $ brew install imagemagick@6
@@ -270,7 +271,10 @@ $ brew install icu4c
 $ echo 'export PATH="/usr/local/opt/icu4c/bin:$PATH"' >> ~/.zshrc
 $ echo 'export PATH="/usr/local/opt/icu4c/bins:$PATH"' >> ~/.zshrc
 ```
+`icu4c` is a binary used to detect the encoding of uploaded file when the user or file format fails to specify.
+
 ```bash
+$ gem install rfi-rzmq
 $ brew install czmq
 $ brew install wget
 $ brew install mc
@@ -280,3 +284,28 @@ $ brew install yarn
 $ brew install phantomjs
 $ brew install r
 ```
+Some descriptions:
+
+1. `rfi-rzmq` and `czmq` are both part of the ZeroMQ package, which is an asynchronous messaging library. The Zappi repos require `zeromq32`, which does not seem to be available. However, installing these two packages should suffice.
+2. `wget` retrieves content from web services.
+3. `yarn` is a JavaScript package manager, similar to Bundler.
+4. The R library (`r`) is required by some gems.
+
+For more info on the other packages, just look them up on Google.
+
+## Python and Conda packages
+
+Python requires some packages not installed by default with Anaconda. Simply use the following commands:
+
+```bash
+pip install https://github.com/intellection/sav-reader-writer/archive/v3.3.0-patched-1.zip
+pip install blosc
+pip install psycopg2
+pip install mysql-python
+conda install redis
+conda install sqlalchemy
+```
+
+1. `savReaderWriter` is a package used to handle .sav files.
+2. `blosc` is a compression library
+3. The rest are SQL/Database adapters for Python.
