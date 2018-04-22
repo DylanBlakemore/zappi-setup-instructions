@@ -86,8 +86,10 @@ Now add the public key to your SSH keys on Github (Settings->SSH and GPG Keys->N
 
 Finally, open up the file `~/.gitignore` and paste into it the contents below:
 
-> \# Folder view configuration files \n
+> \# Folder view configuration files
+
 > .DS_Store
+
 > Desktop.ini
 >
 > \# Thumbnail cache files
