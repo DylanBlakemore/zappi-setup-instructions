@@ -235,11 +235,37 @@ To check that all the services are working, type `$ brew services list`. All the
 
 To provide an easy way to start these services, I recommend making a file in location `~/.start_my_services.sh` containing the following:
 
-	```bash
-	brew services start mysql@5.6
-	brew services start redis
-	brew services start elasticsearch@2.4
-	brew services start mongodb
-	brew services start Postgres
-	```
+```bash
+brew services start mysql@5.6
+brew services start redis
+brew services start elasticsearch@2.4
+brew services start mongodb
+brew services start Postgres
+```
 This can then be run from the terminal with `$ bash ~/.start_my_services.sh`.
+
+# Miscellaneous
+
+The following are all necessary for various parts of the Zappi repos
+
+Install wkhtmltopdf from https://wkhtmltopdf.org/downloads.html
+
+```bash
+$ brew install imagemagick@6
+$ echo 'export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"' >> ~/.zshrc
+```
+```bash
+$ brew install icu4c
+echo 'export PATH="/usr/local/opt/icu4c/bin:$PATH"' >> ~/.zshrc
+echo 'export PATH="/usr/local/opt/icu4c/bins:$PATH"' >> ~/.zshrc
+```
+```bash
+$ brew install czmq
+$ brew install wget
+$ brew install mc
+$ brew install p7zip
+$ brew install qt@5.5
+$ brew install yarn
+$ brew install phantomjs
+$ brew install r
+```
