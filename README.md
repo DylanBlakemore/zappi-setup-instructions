@@ -270,7 +270,7 @@ $ echo 'export PATH="/usr/local/opt/icu4c/bins:$PATH"' >> ~/.zshrc
 `icu4c` is a binary used to detect the encoding of uploaded file when the user or file format fails to specify.
 
 ```bash
-$ gem install rfi-rzmq
+$ gem install ffi-rzmq
 $ brew install czmq
 $ brew install wget
 $ brew install mc
@@ -282,7 +282,7 @@ $ brew install r
 ```
 Some descriptions:
 
-- `rfi-rzmq` and `czmq` are both part of the ZeroMQ package, which is an asynchronous messaging library. The Zappi repos require `zeromq32`, which does not seem to be available. However, installing these two packages should suffice.
+- `ffi-rzmq` and `czmq` are both part of the ZeroMQ package, which is an asynchronous messaging library. The Zappi repos require `zeromq32`, which does not seem to be available. However, installing these two packages should suffice.
 - `wget` retrieves content from web services.
 - `yarn` is a JavaScript package manager, similar to Bundler.
 - The R library (`r`) is required by some gems.
