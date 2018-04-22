@@ -161,6 +161,10 @@ The `/usr/bin/ruby` version is the system version, with the other being the RVM 
 
 Which confirms that you are in fact using the RVM ruby.	
 
+## Rails
+
+(Put something about Rails not being needed when using cloned repos because Bundler installs the correct local version. But if you need a global Rails use correct version)
+
 ## Bundler
 
 Bundler is a Ruby gem that automatically downloads gems and handles dependencies for projects. 
