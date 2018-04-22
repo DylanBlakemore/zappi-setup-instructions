@@ -235,7 +235,7 @@ To check that all the services are working, type `$ brew services list`. All the
 
 To provide an easy way to start these services, I recommend making a file in location `~/.start_my_services.sh` containing the following:
 
-	```
+	```bash
 	brew services start mysql@5.6
 	brew services start redis
 	brew services start elasticsearch@2.4
