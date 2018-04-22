@@ -25,17 +25,21 @@ Combined, Zsh ("Zed shell") and iTerm2 provide customisation tools for the termi
 Type the following into the terminal: 
 
 ```bash
-brew cask install zsh zsh completions 
+$ brew cask install zsh zsh-completions 
 
-curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
+$ curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
 
-chsh -s /usr/local/bin/zsh
+$ chsh -s /usr/local/bin/zsh
 
-brew cask install iterm2 
+$ brew cask install iterm2 
 ```
+This installs (in order) Zsh, Zsh-completions and Oh My Zsh. It then sets Zsh as the default terminal. Finally, it installs iTerm2.
+
 Now close the terminal and open iTerm2, and type
 
 ```bash
-echo 'export PATH="/usr/local/bin:$PATH"' >> ~/.zshrc
+$ echo 'export PATH="/usr/local/bin:$PATH"' >> ~/.zshrc
 ```
 Similarly to the Homebrew instructions, this directs Zsh to use packages installed by Hombrew.
+
+
