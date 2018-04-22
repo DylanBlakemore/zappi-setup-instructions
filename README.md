@@ -170,4 +170,20 @@ Bundler is a Ruby gem that automatically downloads gems and handles dependencies
 ```bash
 $ gem install bundler
 ```
-**Note:** if you do not have permissions to install gems (i.e. you have to use sudo to use the “gem” command”, it means you are still using the system Ruby and need to change.
+**Note:** if you do not have permissions to install gems (i.e. you have to use sudo to use the “gem” command, it means you are still using the system Ruby and need to change.
+
+## Python & Anaconda
+
+Python is a scripting language, and houses the computational engines upon which Quattro is built. Anaconda is a distribution which bundles a whole bunch of important packages together, including NumPy, SciPy and Pandas.
+
+*Installation*
+
+Download Anaconda version 5.0.1 from https://repo.continuum.io/archive/Anaconda2-5.0.1-MacOSX-x86_64.pkg.
+
+In the terminal, type
+```bash
+$ echo ‘export PATH=“$HOME/anaconda2/bin:$PATH”’ >> ~/.zshrc
+```
+Here, (1) downloads the Anaconda package (version 5.0.1 for compatibility). (2) tells Zsh where to search for the distribution. 
+
+To test that this has worked, type `$ which anaconda` into the terminal. It should say `Users/<username>/anaconda2/bin/anaconda`. For a further test, type `$ python` into the terminal and hit enter. You should enter the Python shell. Type `>> import numpy` and enter. If no errors are thrown it should all be good. 
