@@ -44,7 +44,7 @@ Similarly to the Homebrew instructions, this directs Zsh to use packages install
 
 ### Sanity Checks
  - Terminal should have “(zsh)” somewhere at the top.
- - Typing `cat ~/.zshrc` into the terminal should show you the contents of the zshrc file. The bottom line should be export `PATH=“/usr/local/bin:$PATH`.
+ - Typing `$ cat ~/.zshrc` into the terminal should show you the contents of the zshrc file. The bottom line should be export `PATH=“/usr/local/bin:$PATH`.
  
  ## Git and SSH Keys
  
@@ -109,3 +109,54 @@ venv
 node_modules
 .sass-cache
 ```
+## Sublime Text Editor
+
+This just installs a lightweight text editor.
+
+*Installation & Config*
+
+Download Sublime from http://www.sublimetext.com/. Follow the instructions to install.
+
+To create a shortcut to use sublime, type the following into the terminal:
+
+```bash
+$ ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin subl /usr/local/bin/subl
+```
+
+Now you can open a document in Sublime with `$ subl filename.ext`.
+
+## Ruby
+
+Ruby is what the bulk of Zappi is written in. RVM is a tool that manages the Ruby version within a project.
+
+*Installation*
+
+```bash
+$ \curl -sSL https://get.rvm.io | bash
+
+$ source /Users/<username>/.rvm/scripts/rvm
+
+$ rvm install ruby-2.3.3
+```
+Typing the above into the terminal will install RVM and Ruby version 2.3.3 (the version needed by Zappi repos).
+
+### IMPORTANT!!
+
+By default Mac OSx will use the system ruby. This should not be used during development, and it causes issues with root privileges. RVM is used to manage non-system Ruby versions. To double check that you are in fact using RVM and not system ruby, do the following:
+
+1. Type `$ which -a ruby` into the command line. This should show
+
+```bash
+	/Users/<user>/.rvm/rubies/ruby-2.3.3/bin/ruby
+	/usr/bin/ruby
+ ```
+
+The `/usr/bin/ruby` version is the system version, with the other being the RVM version.
+
+2. Type `$ which ruby` into the command line. You should get
+
+	```bash
+ /Users/<user>/.rvm/rubies/ruby-2.3.3/bin/ruby
+ ```
+
+Which confirms that you are in fact using the RVM ruby.	
