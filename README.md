@@ -85,28 +85,27 @@ In order, this will
 Now add the public key to your SSH keys on Github (Settings->SSH and GPG Keys->New SSH Key). The contents of the key are found in `~/.ssh/id_rsa.pub`.
 
 Finally, open up the file `~/.gitignore` and paste into it the contents below:
+```
+\# Folder view configuration files
+.DS_Store
+Desktop.ini
 
-> \# Folder view configuration files
+\# Thumbnail cache files
+._*
+Thumbs.db
 
-> .DS_Store
+\# Files that might appear on external disks
+.Spotlight-V100
+.Trashes
 
-> Desktop.ini
->
-> \# Thumbnail cache files
-> ._*
-> Thumbs.db
->
-> \# Files that might appear on external disks
-> .Spotlight-V100
-> .Trashes
->
-> \# Compiled Python files
-> *.pyc
->
-> \# Compiled C++ files
-> *.out
->
-> \# Application specific files
-> venv
-> node_modules
-> .sass-cache
+\# Compiled Python files
+*.pyc
+
+\# Compiled C++ files
+*.out
+
+\# Application specific files
+venv
+node_modules
+.sass-cache
+```
