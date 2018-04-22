@@ -146,17 +146,17 @@ By default Mac OSx will use the system ruby. This should not be used during deve
 
 1. Type `$ which -a ruby` into the command line. This should show
 
-```bash
+	```bash
 	/Users/<user>/.rvm/rubies/ruby-2.3.3/bin/ruby
 	/usr/bin/ruby
- ```
+ 	```
 
 The `/usr/bin/ruby` version is the system version, with the other being the RVM version.
 
 2. Type `$ which ruby` into the command line. You should get
 
-```bash
+	```bash
  	/Users/<user>/.rvm/rubies/ruby-2.3.3/bin/ruby
- ```
+ 	```
 
 Which confirms that you are in fact using the RVM ruby.	
