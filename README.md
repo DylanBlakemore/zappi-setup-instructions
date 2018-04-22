@@ -155,8 +155,8 @@ The `/usr/bin/ruby` version is the system version, with the other being the RVM 
 
 2. Type `$ which ruby` into the command line. You should get
 
-	```bash
- /Users/<user>/.rvm/rubies/ruby-2.3.3/bin/ruby
+```bash
+ 	/Users/<user>/.rvm/rubies/ruby-2.3.3/bin/ruby
  ```
 
 Which confirms that you are in fact using the RVM ruby.	
