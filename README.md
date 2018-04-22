@@ -142,7 +142,7 @@ Typing the above into the terminal will install RVM and Ruby version 2.3.3 (the 
 
 ### *IMPORTANT!!*
 
-By default Mac OSx will use the system ruby. This should not be used during development, and it causes issues with root privileges. RVM is used to manage non-system Ruby versions. To double check that you are in fact using RVM and not system ruby, do the following:
+By default Mac OSx will use the system ruby. This should not be used during development, and it causes issues with root privileges. RVM is used to manage non-system Ruby versions. To double check that you are using RVM and not system ruby, do the following:
 
 1. Type `$ which -a ruby` into the command line. This should show
 
