@@ -244,6 +244,17 @@ brew services start Postgres
 ```
 This can then be run from the terminal with `$ bash ~/.start_my_services.sh`.
 
+# Gnu Scientific Library (GSL)
+
+This is a library which helps with some advanced calculations. Zappi requires version 1.16.0.4 - unfortunately, this is not available with Homebrew or as a Gem, so the library has to be built from scratch with the following steps:
+
+1. Download gsl-1.16.tar.gz from http://ftp.gnu.org/gnu/gsl/
+2. Extract somewhere.
+3. `$ cd` into the folder.
+4. `$ /.configure`
+5. `$ make`
+6. `$ make install`
+
 # Miscellaneous
 
 The following are all necessary for various parts of the Zappi repos
@@ -256,8 +267,8 @@ $ echo 'export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"' >> ~/.zshrc
 ```
 ```bash
 $ brew install icu4c
-echo 'export PATH="/usr/local/opt/icu4c/bin:$PATH"' >> ~/.zshrc
-echo 'export PATH="/usr/local/opt/icu4c/bins:$PATH"' >> ~/.zshrc
+$ echo 'export PATH="/usr/local/opt/icu4c/bin:$PATH"' >> ~/.zshrc
+$ echo 'export PATH="/usr/local/opt/icu4c/bins:$PATH"' >> ~/.zshrc
 ```
 ```bash
 $ brew install czmq
