@@ -206,28 +206,20 @@ It is **very important** that MySQL **version 5.6** is installed.
 To install, use the following commands:
 ```bash
 $ brew install mysql@5.6
-
 $ echo 'export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"' >> ~/.zshrc
 
 $ brew install redis
-
 $ brew install elasticsearch@2.4
-
 $ brew install mongodb
-
 $ brew install postgres
 ```
 To run the Zappi repos locally, these services need to be running on your machine. To start them, type the following into the terminal:
 
 ```bash
 $ brew services start mysql@5.6
-
 $ brew services start redis
-
 $ brew services start elasticsearch@2.4
-
 $ brew services start mongodb
-
 $ brew services start Postgres
 ```
 
@@ -286,10 +278,10 @@ $ brew install r
 ```
 Some descriptions:
 
-1. `rfi-rzmq` and `czmq` are both part of the ZeroMQ package, which is an asynchronous messaging library. The Zappi repos require `zeromq32`, which does not seem to be available. However, installing these two packages should suffice.
-2. `wget` retrieves content from web services.
-3. `yarn` is a JavaScript package manager, similar to Bundler.
-4. The R library (`r`) is required by some gems.
+- `rfi-rzmq` and `czmq` are both part of the ZeroMQ package, which is an asynchronous messaging library. The Zappi repos require `zeromq32`, which does not seem to be available. However, installing these two packages should suffice.
+- `wget` retrieves content from web services.
+- `yarn` is a JavaScript package manager, similar to Bundler.
+- The R library (`r`) is required by some gems.
 
 For more info on the other packages, just look them up on Google.
 
@@ -306,6 +298,6 @@ conda install redis
 conda install sqlalchemy
 ```
 
-1. `savReaderWriter` is a package used to handle .sav files.
-2. `blosc` is a compression library
-3. The rest are SQL/Database adapters for Python.
+- `savReaderWriter` is a package used to handle .sav files.
+- `blosc` is a compression library
+- The rest are SQL/Database adapters for Python.
