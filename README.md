@@ -42,4 +42,6 @@ $ echo 'export PATH="/usr/local/bin:$PATH"' >> ~/.zshrc
 ```
 Similarly to the Homebrew instructions, this directs Zsh to use packages installed by Hombrew.
 
-
+### Sanity Checks
+ - Terminal should have “(zsh)” somewhere at the top.
+ - Typing `cat ~/.zshrc` into the terminal should show you the contents of the zshrc file. The bottom line should be export `PATH=“/usr/local/bin:$PATH`.
