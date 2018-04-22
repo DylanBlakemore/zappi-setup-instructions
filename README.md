@@ -178,12 +178,68 @@ Python is a scripting language, and houses the computational engines upon which 
 
 *Installation*
 
-Download Anaconda version 5.0.1 from https://repo.continuum.io/archive/Anaconda2-5.0.1-MacOSX-x86_64.pkg.
+Download Anaconda version 5.0.1 from https://repo.continuum.io/archive/Anaconda2-5.0.1-MacOSX-x86_64.pkg and install.
 
 In the terminal, type
 ```bash
 $ echo ‘export PATH=“$HOME/anaconda2/bin:$PATH”’ >> ~/.zshrc
 ```
-Here, (1) downloads the Anaconda package (version 5.0.1 for compatibility). (2) tells Zsh where to search for the distribution. 
+This tells Zsh where to search for the distribution. 
 
 To test that this has worked, type `$ which anaconda` into the terminal. It should say `Users/<username>/anaconda2/bin/anaconda`. For a further test, type `$ python` into the terminal and hit enter. You should enter the Python shell. Type `>> import numpy` and enter. If no errors are thrown it should all be good. 
+
+## Java
+
+Download the Mac version from http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
+and install.
+
+Test with `$ java -version`. It should show the version that you installed.
+
+## Database Services
+
+There are 5 database services needed to run the various Zappi repos: Postgresql, MySQL, MongoDB, Redis, and ElasticSearch. You can look up what these all do online.
+
+It is **very important** that MySQL **version 5.6** is installed.
+
+*Installation*
+
+To install, use the following commands:
+```bash
+$ brew install mysql@5.6
+
+$ echo 'export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"' >> ~/.zshrc
+
+$ brew install redis
+
+$ brew install elasticsearch@2.4
+
+$ brew install mongodb
+
+$ brew install postgres
+```
+To run the Zappi repos locally, these services need to be running on your machine. To start them, type the following into the terminal:
+
+```bash
+$ brew services start mysql@5.6
+
+$ brew services start redis
+
+$ brew services start elasticsearch@2.4
+
+$ brew services start mongodb
+
+$ brew services start Postgres
+```
+
+To check that all the services are working, type `$ brew services list`. All the services should be listed along with `started`.
+
+To provide an easy way to start these services, I recommend making a file in location `~/.start_my_services.sh` containing the following:
+
+	```
+	brew services start mysql@5.6
+	brew services start redis
+	brew services start elasticsearch@2.4
+	brew services start mongodb
+	brew services start Postgres
+	```
+This can then be run from the terminal with `$ bash ~/.start_my_services.sh`.
