@@ -14,7 +14,7 @@ $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/maste
 $ echo 'export PATH="/usr/local/bin:$PATH"' >> ~/.bash_profile 
 ```
 
-This downloads and instals Homebrew, as well as directing the system to use software installed by Homebrew rather than possible default versions. Close the terminal and reopen a new window.
+This downloads and installs Homebrew, as well as directing the system to use software installed by Homebrew rather than possible default versions. Close the terminal and reopen a new window.
 
 ## Zsh and iTerm2
 
