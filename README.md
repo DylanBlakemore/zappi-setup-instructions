@@ -231,7 +231,7 @@ To check that all the services are working, type `$ brew services list`. All the
 
 To provide an easy way to start these services, I recommend making a file in location `~/.start_my_services.sh` containing the following:
 
-```bash
+```
 brew services start mysql@5.6
 brew services start redis
 brew services start elasticsearch@2.4
@@ -294,12 +294,12 @@ For more info on the other packages, just look them up on Google.
 Python requires some packages not installed by default with Anaconda. Simply use the following commands:
 
 ```bash
-pip install https://github.com/intellection/sav-reader-writer/archive/v3.3.0-patched-1.zip
-pip install blosc
-pip install psycopg2
-pip install mysql-python
-conda install redis
-conda install sqlalchemy
+$ pip install https://github.com/intellection/sav-reader-writer/archive/v3.3.0-patched-1.zip
+$ pip install blosc
+$ pip install psycopg2
+$ pip install mysql-python
+$ conda install redis
+$ conda install sqlalchemy
 ```
 
 - `savReaderWriter` is a package used to handle .sav files.
