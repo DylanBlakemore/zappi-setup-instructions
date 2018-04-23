@@ -74,7 +74,7 @@ $ eval “$(ssh-agent -s)”
 
 $ ssh-add -K ~/.ssh/id_rsa
 
-$ git config —global core.excludesfile ~/.gitignore
+$ git config --global core.excludesfile ~/.gitignore
 ```
 
 In order, this will
