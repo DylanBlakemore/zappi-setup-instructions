@@ -174,7 +174,7 @@ Bundler is a Ruby gem that automatically downloads gems and handles dependencies
 ```bash
 $ gem install bundler
 ```
-**Note:** if you do not have permissions to install gems (i.e. you have to use sudo to use the “gem” command, it means you are still using the system Ruby and need to change.
+**Note:** if you do not have permissions to install gems (i.e. you have to use sudo to use the “gem” command), it means you are still using the system Ruby and need to change.
 
 ## Python & Anaconda
 
