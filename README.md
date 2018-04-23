@@ -163,7 +163,13 @@ Which confirms that you are in fact using the RVM ruby.
 
 ## Rails
 
-(Put something about Rails not being needed when using cloned repos because Bundler installs the correct local version. But if you need a global Rails use correct version)
+Rails is the Ruby-based web framework that Zappi runs on. In general, the repos specify the rails gem in their Gemfile, so for the purposes of adding to repos you do not need a global installation.
+
+If you do want a global installation, install version 4.2.10, the version that the Zappi Gemfiles specify:
+
+```bash
+$ gem install rails -v 4.2.10
+```
 
 ## Bundler
 
